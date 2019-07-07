@@ -1,4 +1,4 @@
-package pl.coderslab.Classes;
+package pl.coderslab.models;
 
 public class Book {
     private int id;
@@ -8,7 +8,7 @@ public class Book {
     private String publisher;
     private String type;
 
-    public Book(int id, String isbn, String title,
+    public Book(int id,String isbn, String title,
                 String author, String publisher,
                 String type) {
         this.id = id;
@@ -67,15 +67,9 @@ public class Book {
         this.type = type;
     }
 
+
     @Override
     public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", isbn='" + isbn + '\'' +
-                ", title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", publisher='" + publisher + '\'' +
-                ", type='" + type + '\'' +
-                '}';
+        return String.format("Book with id    %s :<br> title:    %s<br> author:    %s<br> publisher:    %s<br> isbn:    %s<br> type:    %s ", id, title, author, publisher, isbn, type);
     }
 }
